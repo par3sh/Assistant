@@ -103,8 +103,8 @@ def sendEmail(to, content):
 	server.starttls()
 	
 	# Enable low security in gmail
-	server.login('parkamat007@hmail.com', 'your email password')
-	server.sendmail('parkamat007@gmail.com', to, content)
+	server.login('yourmail.com', 'your email password')
+	server.sendmail('yourmail.com@gmail.com', to, content)
 	server.close()
 
 
@@ -165,7 +165,7 @@ if __name__ == '__main__':
 			try:
 				speak("What should I say?")
 				content = takeCommand()
-				to = "parkamat007@gmail.com"
+				to = "yourmail.com@gmail.com"
 				sendEmail(to, content)
 				speak("Email has been sent !")
 			except Exception as e:
